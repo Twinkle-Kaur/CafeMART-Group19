@@ -1,0 +1,41 @@
+<html>
+<head>
+<base href="/">
+<title>JuiceMART</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="css/app.css">
+
+</head>
+<body >
+  
+  <div id="contentParent" class="responsive-columns-wrapper" >
+    <div id="chat-column-holder" class="responsive-column content-column">
+        <label class="appDescription">Welcome to <span style="color:pink;font-family:Brush Script Std">JuiceMART</span>. If
+          you get stuck, type 'help'.</label>
+      <div class="chat-column" style="background-image: url('img/2.jpg');">
+
+          
+        <div id="scrollingChat"></div>
+        <label for="textInput" class="inputOutline"> <input
+          id="textInput" class="input responsive-column"
+          placeholder="Type something (for suggestions, type 'help')."
+          type="text"
+          onkeydown="ConversationPanel.inputKeyDown(event, this)">
+        </label>
+      </div>
+
+    </div>
+
+      <div id="payload-request" class="payload"></div>
+
+    </div>
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/conversation.js"></script>
+  <script src="js/global.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
+</body>
+</html>
